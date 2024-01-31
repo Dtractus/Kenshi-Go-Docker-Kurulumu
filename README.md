@@ -75,9 +75,6 @@ cd unchained-go-docker
 # cp komutu ile dosya içerisinde bulunan conf.worker.yaml.template isimli dosyamızı conf.worker.yaml olarak kopyalayalım.
 cp conf.worker.yaml.template conf.worker.yaml
 
-# Oluşturduğumuz dosyanın içerisine girelim
-cp conf.worker.yaml.template conf.worker.yaml
-
 # Aşağıdaki komut ile kopyaladığımız dosya içeriğini düzenleyelim
 nano conf.worker.yaml
 ```
