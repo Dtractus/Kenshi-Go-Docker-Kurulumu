@@ -81,9 +81,9 @@ nano conf.worker.yaml
 
 > [!WARNING]
 > Nano ile içerisine girdiğimizde değiştirmemiz gereken ilk kısım "name" kısmıdır. Typescript çalıştırıyorsanız lütfen aynı ismi girin ve dosyanın sonuna typescriptinizde bulunan secretKey ve publicKey'i mutlaka ekleyin.<br><br>
-> değişkenler böyle olmalıdır<br><br>
+> Değişkenler aşağıdaki gibi görünmelidir;<br><br>
 > ![image](https://github.com/Dtractus/Kenshi-Go-Docker-Kurulumu/assets/99194112/3e6bef74-f453-4925-8ff9-46ab4d8165ae) <br><br>
-> Eğer Kenshi'yi ilk defa çalıştırıyorsanız (Typescript dahi hiç çalıştırmamışsanız) sadece name kısmını düzenleyip çıkabilirsiniz.<br><br>
+> Eğer Kenshi'yi ilk defa çalıştırıyorsanız, Kenshi Go Docker versiyonu henüz generate özelliğine sahip olmadığı için TypeScript ile generate edip secretKey alabilirsiniz. <br><br>
 > Gerekli alanları düzenledikten sonra sırasıyla CTRL + X, Y ve Enter diyerek editörden çıkabilirsiniz.
 
 ```
