@@ -32,6 +32,14 @@ apt-cache policy docker-ce
 ```
 docker-ce:
   Installed: (none)
+  ...
+  ...
+  5:20.10.14~3-0~ubuntu-focal 500
+  500 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages
+  5:20.10.13~3-0~ubuntu-focal 500
+  500 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages
+  ...
+  ...
 
 ## Ve ardından Docker'ı yükleyelim
 sudo apt install docker-ce
