@@ -64,13 +64,13 @@ Output
 
 ```
 # wget ile dosyamızı indirelim
-wget https://github.com/KenshiTech/unchained/releases/download/go/unchained-go-docker.zip
+wget https://github.com/KenshiTech/unchained/releases/download/v0.11.1/unchained-v0.11.1-docker.zip
 
 # İndirmiş olduğumuz dosyamızı unzipleyelim
-unzip  unchained-go-docker.zip
+unzip  unchained-v0.11.1-docker.zip
 
 # Unzip ile ortaya çıkan dosyamızın içine girelim
-cd unchained-go-docker
+cd unchained-v0.11.1-docker
 
 # cp komutu ile dosya içerisinde bulunan conf.worker.yaml.template isimli dosyamızı conf.worker.yaml olarak kopyalayalım.
 cp conf.worker.yaml.template conf.worker.yaml
