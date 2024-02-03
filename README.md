@@ -119,7 +119,7 @@ nano conf.worker.yaml
 > Lütfen yukarıdaki seçeneklerden size uygun olan adımı yaptığınızdan emin olun! Her ikisini aynı anda yapmayacaksınız, yalnızca size uygun olan "WARNING" seçeneğinin altındaki adımları uygulayın!<br><br>
 
 ```
-# Aşağıdaki kod ile bana klasörümüze dönelim.
+# Aşağıdaki kod ile ana klasörümüze dönelim.
 cd ..
 
 # Yukarıdaki işlemleri hallettiysek şimdi dosyamıza çalıştırma izni verelim.
