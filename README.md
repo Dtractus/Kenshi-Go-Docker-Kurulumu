@@ -1,9 +1,9 @@
 # Kenshi-Go-Docker-Kurulumu
 
 > [!NOTE]
-> Kenshi yakın zamanda typescript yerine GOLang ile çalışacağını dile getirdi ve testlerine başladı. Test etmek isteyenler için oluşturulmuş bir repodur.
+> Kenshi yakın zamanda typescript yerine GOLang ile çalışmaya başladı. JS versiyonunda çalışmaya devam edecek nodelar için puan vermeyi bıraktığını duyurdu. 
 <br>
-Kenshi Go versiyonunu Docker ile test etmek için hazırsanız başlayalım.
+Kenshi Go versiyonunu Docker çalıştırmak isterseniz aşağıda detaylı anlatımını bulabilirsiniz.
 <br>
 
 ## Sunucu Güncelleme ve Docker Kurulumu
@@ -72,21 +72,56 @@ unzip  unchained-v0.11.1-docker.zip
 # Unzip ile ortaya çıkan dosyamızın içine girelim
 cd unchained-v0.11.1-docker
 
-# cp komutu ile dosya içerisinde bulunan conf.worker.yaml.template isimli dosyamızı conf.worker.yaml olarak kopyalayalım.
-cp conf.worker.yaml.template conf.worker.yaml
+# Aşağıdaki kod ile conf adında bir dosya oluşturalım.
+mkdir conf
 
-# Aşağıdaki komut ile kopyaladığımız dosya içeriğini düzenleyelim
-nano conf.worker.yaml
+# cp komutu ile dosya içerisinde bulunan conf.worker.yaml.template isimli dosyamızı conf dosyası içerisine conf.worker.yaml olarak kopyalayalım.
+cp conf.worker.yaml.template conf/conf.worker.yaml
+
+# Aşağıdaki kod ile worker'ı çalıştıralım. Ardından hemen durduracağız. 
+./unchained.sh worker up -d
+
+# Worker'ı durduralım. Lütfen sayımın bitmesini (yani workerın durmasını) bekleyin 
+./unchained.sh worker stop
+
+# Aşağıdaki komut ile conf içerisine girelim. Bu komuttan sonra aşağıda 2 ayrı anlatım bulunacak. Daha önce Kenshi kullananlar ve kulllanmayanlar için. Lütfen warning kısımlarından size hangisi uygunsa ona göre hareket edin!
+cd conf 
 ```
 
 > [!WARNING]
-> Nano ile içerisine girdiğimizde değiştirmemiz gereken ilk kısım "name" kısmıdır. Typescript çalıştırıyorsanız lütfen aynı ismi girin ve dosyanın sonuna typescriptinizde bulunan secretKey ve publicKey'i mutlaka ekleyin.<br><br>
-> Değişkenler aşağıdaki gibi görünmelidir;<br><br>
-> ![image](https://github.com/Dtractus/Kenshi-Go-Docker-Kurulumu/assets/99194112/3e6bef74-f453-4925-8ff9-46ab4d8165ae) <br><br>
-> Eğer Kenshi'yi ilk defa çalıştırıyorsanız, Kenshi Go Docker versiyonu henüz generate özelliğine sahip olmadığı için TypeScript ile generate edip secretKey alabilirsiniz. <br><br>
-> Gerekli alanları düzenledikten sonra sırasıyla CTRL + X, Y ve Enter diyerek editörden çıkabilirsiniz.
+> Bu aşama Kenshi'yi daha önce kuranlar için! (Elinizde secretKey ve publicKey bulunuyorsa)
+> Daha önca çalıştırdıysanız Kenshi TypeScript ile çalıştırdığımız conf.yaml içerisinde bu bilgiler bulunur. 
+
 
 ```
+# conf.worker.yaml  içerisine gidelim;
+nano conf.worker.yaml
+
+# Ekranda olan "name" bölümünü düzenleyin ve ardından sırasıyla CTRL +X, Y ve enter diyerek çıkın.
+
+# secrets.worker.yaml  içerisine gidelim;
+nano secrets.worker.yaml
+
+# Bu kısımda secretKey ve publicKey alanlarını düzenleyin ve ardından sırasıyla CTRL +X, Y ve enter diyerek çıkın.
+```
+
+> [!WARNING]
+> Bu aşama Kenshi'yi ilk defa kuracaklar içindir! Daha önce hiç TypeScript dahi çalıştırmamış kullanıcılar içindir!
+
+```
+# conf.worker.yaml  içerisine gidelim ve name içerisine kullanmak istediğiniz (Websitesinde görünecek adınız) nickinizi yazın;
+nano conf.worker.yaml
+
+# Ekranda olan "name" bölümünü düzenledikten sonra CTRL +X, Y ve enter diyerek çıkın.
+```
+
+> [!CAUTION]
+> Lütfen yukarıdaki seçeneklerden size uygun olan adımı yaptığınızdan emin olun! Her ikisini aynı anda yapmayacaksınız, yalnızca size uygun olan "WARNING" seçeneğinin altındaki adımları uygulayın!<br><br>
+
+```
+# Aşağıdaki kod ile bana klasörümüze dönelim.
+cd ..
+
 # Yukarıdaki işlemleri hallettiysek şimdi dosyamıza çalıştırma izni verelim.
 chmod +x unchained.sh
 
