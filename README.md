@@ -41,6 +41,8 @@ docker-ce:
   ...
   ...
 
+## Yukarıdaki komuttan sonra ekrandan çıkamıyorsanız terminali kapatıp tekrar açabilirsiniz. 
+
 ## Ve ardından Docker'ı yükleyelim
 sudo apt install docker-ce
 
