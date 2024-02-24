@@ -66,13 +66,13 @@ Output
 
 ```
 # wget ile dosyamızı indirelim
-wget https://github.com/KenshiTech/unchained/releases/download/v0.11.1/unchained-v0.11.1-docker.zip
+wget ttps://github.com/KenshiTech/unchained/releases/download/v0.11.9/unchained-v0.11.9-docker.zip
 
 # İndirmiş olduğumuz dosyamızı unzipleyelim
-unzip  unchained-v0.11.1-docker.zip
+unzip unchained-v0.11.9-docker.zip
 
 # Unzip ile ortaya çıkan dosyamızın içine girelim
-cd unchained-v0.11.1-docker
+cd unchained-v0.11.9-docker.zip
 
 # Aşağıdaki kod ile conf adında bir dosya oluşturalım.
 mkdir conf
