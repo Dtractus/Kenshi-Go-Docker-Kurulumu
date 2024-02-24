@@ -135,5 +135,4 @@ chmod +x unchained.sh
 > ./unchained.sh worker logs -f  kodu ile loglarınızı kontrol edebilirsiniz.<br><br>
 > Herhangi bir sorun yoksa ekran görüntünüz aşağıdaki gibi olmalıdır.<br><br>
 
-![Screenshot_6](![image](https://github.com/Dtractus/Kenshi-Go-Docker-Kurulumu/assets/55835876/a8a44b70-2dcb-44d0-8490-bdad57b28662)
-)
+![Screenshot_6](![image](https://github.com/Dtractus/Kenshi-Go-Docker-Kurulumu/assets/55835876/a8a44b70-2dcb-44d0-8490-bdad57b28662))
