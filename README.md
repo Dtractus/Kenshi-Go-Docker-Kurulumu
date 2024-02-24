@@ -72,7 +72,7 @@ wget ttps://github.com/KenshiTech/unchained/releases/download/v0.11.9/unchained-
 unzip unchained-v0.11.9-docker.zip
 
 # Unzip ile ortaya çıkan dosyamızın içine girelim
-cd unchained-v0.11.9-docker.zip
+cd unchained-v0.11.9-docker
 
 # Aşağıdaki kod ile conf adında bir dosya oluşturalım.
 mkdir conf
