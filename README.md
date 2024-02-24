@@ -80,8 +80,11 @@ mkdir conf
 # cp komutu ile dosya içerisinde bulunan conf.worker.yaml.template isimli dosyamızı conf dosyası içerisine conf.worker.yaml olarak kopyalayalım.
 cp conf.worker.yaml.template conf/conf.worker.yaml
 
-# Aşağıdaki kod ile worker'ı çalıştıralım. Ardından hemen durduracağız. 
+# Aşağıdaki kod ile worker'ı çalıştıralım. Ardından hemen durduracağız. HATA ALIRSANIZ BIR SONRAKI KODU GIRIP, ONDAN SONRA BUNU YAPIN.
 ./unchained.sh worker up -d
+
+# HATA ALDIYSANIZ BUNU KULLANIP DSHA SONRA ÜSTTEKI KODU CALISTIRIN.
+docker rm --force unchained_worker
 
 # Worker'ı durduralım. Lütfen sayımın bitmesini (yani workerın durmasını) bekleyin 
 ./unchained.sh worker stop
