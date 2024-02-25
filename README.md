@@ -1,4 +1,4 @@
-# Kenshi-Go-Docker-Kurulumu
+# Kenshi-Go-Docker-Kurulumu LATEST 11.9
 
 > [!NOTE]
 > Kenshi yakın zamanda typescript yerine GOLang ile çalışmaya başladı. JS versiyonunda çalışmaya devam edecek nodelar için puan vermeyi bıraktığını duyurdu. 
@@ -66,7 +66,7 @@ Output
 
 ```
 # wget ile dosyamızı indirelim
-wget ttps://github.com/KenshiTech/unchained/releases/download/v0.11.9/unchained-v0.11.9-docker.zip
+wget https://github.com/KenshiTech/unchained/releases/download/v0.11.9/unchained-v0.11.9-docker.zip
 
 # İndirmiş olduğumuz dosyamızı unzipleyelim
 unzip unchained-v0.11.9-docker.zip
@@ -89,8 +89,7 @@ docker rm --force unchained_worker
 # Worker'ı durduralım. Lütfen sayımın bitmesini (yani workerın durmasını) bekleyin 
 ./unchained.sh worker stop
 
-# Aşağıdaki komut ile conf içerisine girelim. Bu komuttan sonra aşağıda 2 ayrı anlatım bulunacak. Daha önce Kenshi kullananlar ve kulllanmayanlar için. Lütfen warning kısımlarından size hangisi uygunsa ona göre hareket edin!
-cd conf 
+# Bu komuttan sonra aşağıda 2 ayrı anlatım bulunacak. Daha önce Kenshi kullananlar ve kulllanmayanlar için. Lütfen warning kısımlarından size hangisi uygunsa ona göre hareket edin!
 ```
 
 > [!WARNING]
@@ -99,6 +98,9 @@ cd conf
 
 
 ```
+# conf klasörüne girelim
+cd conf 
+
 # conf.worker.yaml  içerisine gidelim;
 nano conf.worker.yaml
 
@@ -114,6 +116,9 @@ nano secrets.worker.yaml
 > Bu aşama Kenshi'yi ilk defa kuracaklar içindir! Daha önce hiç TypeScript dahi çalıştırmamış kullanıcılar içindir!
 
 ```
+# conf klasörüne girelim
+cd conf
+
 # conf.worker.yaml  içerisine gidelim ve name içerisine kullanmak istediğiniz (Websitesinde görünecek adınız) nickinizi yazın;
 nano conf.worker.yaml
 
