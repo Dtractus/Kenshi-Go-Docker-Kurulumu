@@ -1,4 +1,4 @@
-# Kenshi-Go-Docker-Kurulumu LATEST 11.9
+# Kenshi-Go-Docker-Kurulumu LATEST 11.18
 
 > [!NOTE]
 > Kenshi yakın zamanda typescript yerine GOLang ile çalışmaya başladı. JS versiyonunda çalışmaya devam edecek nodelar için puan vermeyi bıraktığını duyurdu. 
